@@ -1,9 +1,62 @@
 html, body{
+    display: flex;
     width: 100%;
     height: 100%;
     height: -webkit-fill-available;
     height: fill-available;
     padding: 0;
     margin: 0;
+    color: white;
     background-color: rgb(30, 30, 30);
 }
+
+#root{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 5vmin;
+    gap: 5vmin;
+    color: white;
+}
+
+button{
+    border-style: none;
+    color: white;
+    background-color: rgb(60, 60, 60);            
+    border-radius: 100vmin;
+}
+
+button:active{
+    opacity: 50%;
+    background-color: rgb(30, 30, 30);
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15vmin;
+    object-fit: cover;
+    position: absolute;
+}
+
+    #topCon{
+        display: flex;
+        height: 75px;
+        gap: 2vmin;
+    }
+
+        .top{
+            width: 75px;
+            flex: 1;
+        }
+
+    .con{
+        flex: 1;
+        border-radius: 15vmin;
+        position: relative;
+        background-color: turquoise;
+    }
+
+    .conHidden{
+        display: none;
+    }
