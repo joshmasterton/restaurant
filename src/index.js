@@ -1,5 +1,8 @@
 import "./index.css";
 import homeImg from "./imgs/home.jpg";
+import menuImg from "./imgs/menu.jpg";
+import contactImg from "./imgs/contact.jpg";
+
 
 const restaurantPage = (() => {
     const onClick = (e, getHome, getMenu, getContact) => {
@@ -54,13 +57,59 @@ const displayController = (() => {
     };
 
     const createHome = () => {
+        const homeBlack = document.createElement("div");
+        homeBlack.id = "homeBlack";
+        getHomeCon.appendChild(homeBlack);
+
+        const homeTitle = document.createElement("div");
+        homeTitle.id = "homeTitle";
+        homeTitle.innerHTML = "Home";
+        getHomeCon.appendChild(homeTitle);
+
         const homeImgCon = document.createElement("img");
         homeImgCon.src = homeImg;
         getHomeCon.appendChild(homeImgCon);        
     };
 
-    return {createTopButtons, createHome};
+    const createMenu = () => {
+        const menuBlack = document.createElement("div");
+        menuBlack.id = "homeBlack";
+        getMenuCon.appendChild(menuBlack);
+
+        const menuTitle = document.createElement("div");
+        menuTitle.id = "homeTitle";
+        menuTitle.innerHTML = "Menu";
+        getMenuCon.appendChild(menuTitle);
+
+        const menuImgCon = document.createElement("img");
+        menuImgCon.src = menuImg;
+        getMenuCon.appendChild(menuImgCon);                
+    };
+
+    const createContact = () => {
+        const contactBlack = document.createElement("div");
+        contactBlack.id = "homeBlack";
+        getContactCon.appendChild(contactBlack);
+
+        const contactTitle = document.createElement("div");
+        contactTitle.id = "homeTitle";
+        contactTitle.innerHTML = "Contact";
+        getContactCon.appendChild(contactTitle);
+
+        const contactImgCon = document.createElement("img");
+        contactImgCon.src = contactImg;
+        getContactCon.appendChild(contactImgCon);                
+    };
+
+    return {
+        createTopButtons, 
+        createHome, 
+        createMenu,
+        createContact,
+    };
 })();
 
 displayController.createTopButtons();
 displayController.createHome();
+displayController.createMenu();
+displayController.createContact();

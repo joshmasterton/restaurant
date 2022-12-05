@@ -6,7 +6,9 @@ html, body{
     height: fill-available;
     padding: 0;
     margin: 0;
+    font-size: 4vmin;
     color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: rgb(30, 30, 30);
 }
 
@@ -24,6 +26,8 @@ button{
     color: white;
     background-color: rgb(60, 60, 60);            
     border-radius: 100vmin;
+    font-size: 3vmin;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 button:active{
@@ -37,6 +41,7 @@ img{
     border-radius: 15vmin;
     object-fit: cover;
     position: absolute;
+    object-position: center;
 }
 
     #topCon{
@@ -54,9 +59,35 @@ img{
         flex: 1;
         border-radius: 15vmin;
         position: relative;
-        background-color: turquoise;
+        background-color: rgb(60, 60, 60);            
     }
 
     .conHidden{
         display: none;
     }
+
+    #homeCon{
+    }
+
+        #homeBlack{
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 20vmin;
+            top: 50%;
+            margin-top: -10vmin;
+            opacity: 75%;
+            background-color: rgb(30, 30, 30);
+        }
+
+        #homeTitle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 20vmin;
+            top: 50%;
+            margin-top: -10vmin;
+        }
